@@ -16,7 +16,7 @@ spec:
         app: django-app
     spec:
       containers:
-        - image: theo237/kube_django:0
+        - image: theo237/kube_django:latest
           name: django-container
           ports:
             - containerPort: 8083
