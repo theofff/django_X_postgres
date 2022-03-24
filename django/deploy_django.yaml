@@ -16,7 +16,7 @@ spec:
         app: django-app
     spec:
       containers:
-        - image: theo237/django_postgres
+        - image: theo237/django_postgres:0
           name: django-container
           ports:
             - containerPort: 8083
