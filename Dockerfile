@@ -11,4 +11,4 @@ WORKDIR ./django_X_postgres
 RUN pip install -r requirements.txt
 
 EXPOSE 8083
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8083"]
+CMD ["python3", "my_site/manage.py", "runserver", "0.0.0.0:8083"]
