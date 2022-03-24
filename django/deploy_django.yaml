@@ -20,18 +20,6 @@ spec:
           name: django-container
           ports:
             - containerPort: 8083
-          env:
-            - name: POSTGRES_USER
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-config
-                  key: user
-
-            - name: POSTGRES_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-config
-                  key: password
-
-            - name: POSTGRES_HOST
-              value: postgres-service
+          envFrom:
+            - configMapRef:
+                name: postgres-config
