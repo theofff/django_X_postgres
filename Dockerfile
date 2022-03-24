@@ -3,7 +3,7 @@ FROM nginx
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     && apt-get install -y python3-pip python3 \
-    && apt-get install -y git
+    && apt-get install -y git \
     && rm -rf /var/lib/apt/lists/*
     
 RUN git clone https://github.com/theofff/django_X_postgres.git    
