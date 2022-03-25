@@ -1,4 +1,4 @@
-python3 /mysite/manage.py createsuperuser <<EOF
+winpty python3 /mysite/manage.py createsuperuser <<EOF
 $ADMIN
 admin@example.com
 $ADMIN_PASSWORD
