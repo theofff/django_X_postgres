@@ -19,7 +19,20 @@ spec:
         - name: postgres-container
           image: postgres:13
           ports:
-            - containerPort: 5432
-          envFrom:
-            - configMapRef:
-                name: postgres-config
+            - containerPort: 5432            
+          env:
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: postgres-user
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: postgres-password
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: postgres-db
