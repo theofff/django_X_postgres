@@ -39,10 +39,10 @@ spec:
 
 
           volumeMounts:
-          - name: postgres-volume-mount
+          - name: postgres-volume-mount2
             mountPath: /var/lib/postgresql/data
 
       volumes:
-        - name: postgres-volume-mount
+        - name: postgres-volume-mount2
           persistentVolumeClaim:
-            claimName: postgres-pvc
+            claimName: postgres-pvc2
