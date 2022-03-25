@@ -7,8 +7,7 @@ RUN apt-get update \
     && apt-get install -y git \
     && rm -rf /var/lib/apt/lists/*
 
-COPY mysite/ /
-COPY requirements.txt
+COPY . /
 WORKDIR /
 RUN pip install -r requirements.txt
 
