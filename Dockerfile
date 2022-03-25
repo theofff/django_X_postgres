@@ -7,8 +7,8 @@ RUN apt-get update \
     && apt-get install -y git \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/theofff/django_X_postgres.git
-WORKDIR ./django_X_postgres
+COPY . /
+WORKDIR /django_X_postgres
 RUN pip install -r requirements.txt
 
 EXPOSE 8083
