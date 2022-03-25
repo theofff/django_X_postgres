@@ -18,6 +18,7 @@ spec:
       containers:
         - image: theo237/kube:latest
           name: django-container
+          command: ['/bin/bash', 'run.sh'] # runs migrations and starts the server
           ports:
             - containerPort: 8083
           env:
