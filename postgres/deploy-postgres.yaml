@@ -36,16 +36,6 @@ spec:
                 secretKeyRef:
                   name: postgres-secret
                   key: database
-            - name: ADMIN
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-secret
-                  key: superuser
-            - name: ADMIN_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-secret
-                  key: superuser-password
           volumeMounts:
           - name: postgres-volume-mount
             mountPath: /var/lib/postgresql/data
