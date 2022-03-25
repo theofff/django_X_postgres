@@ -8,7 +8,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /
-WORKDIR /django_X_postgres
+WORKDIR /
 RUN pip install -r requirements.txt
 
 EXPOSE 8083
