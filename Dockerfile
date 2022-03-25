@@ -7,12 +7,12 @@ RUN apt-get update \
     && apt-get install -y git \
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /
+COPY mysite/ /
+COPY requirements.txt
 WORKDIR /
 RUN pip install -r requirements.txt
 
 EXPOSE 8083
-CMD ["python3", "mysite/manage.py", "runserver", "0.0.0.0:8083"]
 
 
 
