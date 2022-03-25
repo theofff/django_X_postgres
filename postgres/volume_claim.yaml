@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: postgres-pvc2
+  name: postgres-pvc
   labels:
     type: local
 spec:
@@ -11,4 +11,4 @@ spec:
   resources:
     requests:
       storage: 2Gi
-  volumeName: postgres-pv2
+  volumeName: postgres-pv
