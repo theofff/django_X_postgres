@@ -1,3 +1,5 @@
 docker build -t kube . \
 && docker tag kube theo237/kube \
 && docker push theo237/kube
+
+minikube service django-service --url
